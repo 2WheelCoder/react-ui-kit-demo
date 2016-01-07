@@ -16,15 +16,11 @@ html
 	font-family $primaryFont
 	-webkit-font-smoothing antialiased
 	-moz-osx-font-smoothing grayscale
-	height 100%
 	
 
 body
 	color $black
 	margin 0
-	height 100%
-	overflow hidden
-	position relative
 
 a,
 button,
@@ -38,7 +34,10 @@ label
 ul,
 ol
 	margin-bottom 0
-	padding-left 0
+	
+	ul,
+	ol
+		padding-left $bl
 
 li
 	list-style none

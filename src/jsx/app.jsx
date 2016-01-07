@@ -5,8 +5,8 @@ import LibraryPage from './pages/LibraryPage.jsx'
 class UIKit {
 	constructor() {
 		ReactDOM.render(
-			<LibraryPage string="My Prop" />,
-			document.body
+			<LibraryPage />,
+			document.getElementById('app')
 		)
 	}
 }

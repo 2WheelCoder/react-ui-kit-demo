@@ -1,27 +1,20 @@
+// Libraries
 @require 'jeet'
-@require 'base/reset'
+@require './libs/slick'
 
-/*------------------------------------*\
-	FONTS
-\*------------------------------------*/
+// Base Styles
+@require 'base/reset'
 @require 'base/font-face'
 
-
-/*------------------------------------*\
-    GLOBAL
-\*------------------------------------*/
+// Global
 @require 'global/variables'
 @require 'global/mixins/*'
 @require 'global/extends/*'
 
-
-/*------------------------------------*\
-    BASE
-\*------------------------------------*/
+// Base Elements (project specific reset)
 @require 'base/elements'
 
-
-/*------------------------------------*\
-    COMPONENTS
-\*------------------------------------*/
+// Components, Pages, Helper Styles
 @require 'components/**/*'
+@require 'pages/**/*'
+@require 'helpers/**/*'

@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react'
 
-export default class LibraryPage extends Component {
+export default class ButtonComponent extends Component {
 	static propTypes = {
 		string: PropTypes.string.isRequired,
 		onClick: PropTypes.func.isRequired
