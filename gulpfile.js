@@ -14,27 +14,19 @@ var environment = gutil.env.type || 'development';
 var isProduction = environment === 'production';
 var webpackConfig = require('./webpack.config.js').getConfig(environment);
 
-gulp.task('scripts', function() {
+function scripts() {
 	return gulp.src(webpackConfig.entry)
+		.pipe(plumber())
 		.pipe(webpack(webpackConfig))
-		//.pipe(isProduction ? $.uglify() : $.util.noop())
-		.pipe(gulp.dest('www/'))
-		// .pipe($.connect.reload());
+		.pipe(gulp.dest('./www/'))
 		.pipe(browserSync.reload({stream:true}));
-});
+}
 
-gulp.task('browser-sync', function() {
-	browserSync({
-		server: {
-			baseDir: "./www"
-		}
-	});
-});
-
-gulp.task("test", function() {
-	return gulp.src('./src/jsx/tests/**/*.jsx', {read: false})
-		.pipe(mocha({reporter: 'spec'}))
-});
+function index() {
+	return gulp.src('./src/index.html')
+		.pipe(plumber())
+		.pipe(gulp.dest('./www/'))
+}
 
 function styles() {
 	return gulp.src('src/styl/*.styl')
@@ -44,11 +36,27 @@ function styles() {
 				jeet()
 			]
 		}))
-		.pipe(gulp.dest('www/'))
+		.pipe(gulp.dest('./www/'))
 		.pipe(browserSync.reload({stream:true}));
 }
 
+gulp.task('browser-sync', function() {
+	browserSync({
+		server: {
+			baseDir: "./www/"
+		}
+	});
+});
+
+gulp.task("test", function() {
+	return gulp.src('./src/jsx/tests/**/*.jsx', {read: false})
+		.pipe(mocha({reporter: 'spec'}))
+});
+
 gulp.task('default', ['browser-sync'], function () {
+	index()
 	styles()
+	scripts()
 	watch('src/styl/**/*.styl', styles);
+	watch('src/index.html', index);
 });
