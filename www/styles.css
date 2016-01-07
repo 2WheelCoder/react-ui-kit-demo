@@ -1,0 +1,274 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*------------------------------------*	FONTS
+\*------------------------------------*/
+@font-face {
+  font-family: 'icons';
+  src: url("fonts/icons/icons.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/*------------------------------------*    GLOBAL
+\*------------------------------------*/
+.textbox--date:after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*------------------------------------*    BASE
+\*------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  font-family: Avenir, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+body {
+  color: #333;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+a,
+button,
+input,
+label {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+ul,
+ol {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+button {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  font-family: Avenir, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+strong {
+  font-weight: bold;
+}
+em {
+  text-decoration: underline;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+label {
+  display: block;
+}
+input {
+  -webkit-user-select: auto !important;
+  -khtml-user-select: auto !important;
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  user-select: auto !important;
+}
+::-webkit-placeholder {
+  font-family: $secondaryFont;
+  color: $darkGrey;
+}
+:-moz-placeholder {
+  font-family: $secondaryFont;
+  color: $darkGrey;
+}
+::-moz-placeholder {
+  font-family: $secondaryFont;
+  color: $darkGrey;
+}
+:-ms-placeholder {
+  font-family: $secondaryFont;
+  color: $darkGrey;
+}
+/*------------------------------------*    COMPONENTS
+\*------------------------------------*/
+.textbox {
+  display: inline-block;
+  margin-bottom: 0.6250000005em;
+  padding: 0.9em 2.35% 0.75em;
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 0.1875rem;
+  outline: none;
+  font-family: Avenir, sans-serif;
+  appearance: none;
+  font-size: 1.0000000005em;
+}
+.textbox__label {
+  margin: 0.75em 0;
+}
+.textbox--wide {
+  display: block;
+  width: 100%;
+}
+.textbox--error {
+  color: #fd4545;
+  border-color: #fd4545;
+}
+.textbox--date {
+  position: relative;
+  height: 3.1484375rem;
+}
+.textbox--date:after {
+  content: 'DOB';
+  left: 2.35%;
+  color: #9b9b9b;
+}
+.textbox--date.textbox--active:after {
+  content: '';
+}
+.textbox__suffix {
+  margin-left: 0.15em;
+  font-weight: bold;
+  color: #b4b4b4;
+  font-size: 1.5em;
+  vertical-align: middle;
+}

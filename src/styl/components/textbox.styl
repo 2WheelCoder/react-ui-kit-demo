@@ -1,0 +1,43 @@
+.textbox
+	display inline-block
+	margin-bottom $bl * .416666667
+	padding ($bl * .6) $xPadding ($bl * .5)
+	background $white1	
+	border 1px solid $grey4
+	border-radius $borderRadius
+	outline none
+	font-family $primaryFont
+	appearance none
+	font-size $bl * .666666667
+
+.textbox__label
+	margin ($bl * .5) 0
+
+.textbox--wide
+	display block
+	width 100%
+
+.textbox--error
+	color $errorRed
+	border-color $errorRed
+
+.textbox--date
+	position relative
+	height 3.1484375rem
+	
+	&:after
+		@extend $verticalCenter
+		content 'DOB'
+		left $xPadding
+		color $grey7
+	
+	&.textbox--active
+		&:after
+			content ''
+
+.textbox__suffix
+	margin-left $bl * .1
+	font-weight bold
+	color $grey6
+	font-size $bl * 1
+	vertical-align middle

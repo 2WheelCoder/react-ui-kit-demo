@@ -1,0 +1,39 @@
+{
+  "name": "react-ui-kit-demo",
+  "version": "1.0.0",
+  "description": "A demo of using React to build a UI kit.",
+  "main": "gulpfile.js",
+  "private": true,
+  "scripts": {
+    "test": "gulp test"
+  },
+  "author": "Nick Stevens",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.4.0",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015-loose": "^6.1.4",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-1": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browser-sync": "^2.11.0",
+    "browserify": "^12.0.1",
+    "expect": "^1.13.4",
+    "expect-jsx": "^2.2.2",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.2.0",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5",
+    "gulp-webpack": "^1.5.0",
+    "jeet": "^6.1.2",
+    "react": "^0.14.6",
+    "react-addons-test-utils": "^0.14.6",
+    "react-dom": "^0.14.5",
+    "webpack": "^1.12.10"
+  }
+}

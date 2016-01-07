@@ -1,0 +1,100 @@
+/*------------------------------------*\
+    ELEMENT BASE STYLES
+\*------------------------------------*/
+
+/**
+ * These styles essentially extend the global-reset() in styls.styl
+ * to include additional preferences I use to develop sites. Some
+ * site-specific styling may be here if it appears ona global element.
+ */
+
+*
+	box-sizing border-box
+
+html
+	font-size $globalFontSize
+	font-family $primaryFont
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+	height 100%
+	
+
+body
+	color $black
+	margin 0
+	height 100%
+	overflow hidden
+	position relative
+
+a,
+button,
+input,
+label
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+	outline none
+	-webkit-tap-highlight-color rgba(0,0,0,0)
+
+ul,
+ol
+	margin-bottom 0
+	padding-left 0
+
+li
+	list-style none
+
+a
+	cursor pointer
+	text-decoration none
+
+button
+	appearance none
+	background-color transparent
+	border none
+	box-shadow none
+	cursor pointer
+	font-family $primaryFont
+	font-size $globalFontSize
+	margin 0
+	padding 0
+	outline none
+
+strong
+	font-weight bold
+
+em
+	text-decoration underline
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	font-weight bold
+
+label
+	display block
+
+input
+	-webkit-user-select auto !important
+	-khtml-user-select auto !important
+	-moz-user-select auto !important
+	-ms-user-select auto !important
+	user-select auto !important
+
+::-webkit-placeholder
+	font-family $secondaryFont
+	color $darkGrey
+
+:-moz-placeholder
+	font-family $secondaryFont
+	color $darkGrey
+
+::-moz-placeholder
+	font-family $secondaryFont
+	color $darkGrey
+
+:-ms-placeholder
+	font-family $secondaryFont
+	color $darkGrey
