@@ -55,18 +55,17 @@ describe('Textbox Component', () => {
 		expect(actualElement).toEqualJSX(expectedElement);
 	});
 
-	// it('inputs', () => {
-	// 	let renderer = createRenderer();
-	// 	let hasChanged = false;
-	// 	let change = () => hasChanged = true;
-	// 	renderer.render(
-	// 		<Textbox
-	// 			placeholder={placeholder}
-	// 			name={name}
-	// 			onChange={change} />
-	// 	);
-	// 	console.log('renderer', renderer._instance)
-	// 	renderer.getRenderOutput().props.onChange(renderer._instance);
-	// 	expect(hasChanged).toBe(true);
-	// });
+	it('returns changes', () => {
+		let renderer = createRenderer();
+		let hasChanged = false;
+		let change = () => hasChanged = true;
+		renderer.render(
+			<Textbox
+				placeholder={placeholder}
+				name={name}
+				onChange={change} />
+		);
+		renderer.getRenderOutput().props.onChange({target: {value: 'my-value'}});
+		expect(hasChanged).toBe(true);
+	});
 });

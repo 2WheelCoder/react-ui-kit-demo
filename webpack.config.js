@@ -16,6 +16,9 @@ module.exports.getConfig = function(type) {
 					presets: ['react', 'es2015-loose', 'stage-1']
 				}
 			}]
+		},
+		resolve: {
+			extensions: ['', '.js', '.jsx']
 		}
 	};
 }

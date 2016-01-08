@@ -19691,7 +19691,11 @@
 
 	var _TextboxComponent2 = _interopRequireDefault(_TextboxComponent);
 
-	var _reactSlick = __webpack_require__(164);
+	var _ProgressBarComponent = __webpack_require__(164);
+
+	var _ProgressBarComponent2 = _interopRequireDefault(_ProgressBarComponent);
+
+	var _reactSlick = __webpack_require__(165);
 
 	var _reactSlick2 = _interopRequireDefault(_reactSlick);
 
@@ -19712,8 +19716,11 @@
 			var _this = _possibleConstructorReturn(this, _Component.call(this, props));
 
 			_this.state = {
-				textboxValue: ''
+				textboxValue: '',
+				progress: 25
 			};
+
+			_this.moveProgressBar();
 			return _this;
 		}
 
@@ -19725,12 +19732,25 @@
 			});
 		};
 
+		LibraryPage.prototype.moveProgressBar = function moveProgressBar() {
+			var _this2 = this;
+
+			setInterval(function () {
+				_this2.setState(function (prevState) {
+					return {
+						textboxValue: prevState.textboxValue,
+						progress: prevState.progress === 25 ? 68 : 25
+					};
+				});
+			}, 2000);
+		};
+
 		LibraryPage.prototype.render = function render() {
 			var carouselSettings = {
-				autoplay: false,
-				// autoplaySpeed: 4000,
+				autoplay: true,
+				autoplaySpeed: 3000,
 				dots: true,
-				infinite: false,
+				infinite: true,
 				speed: 500,
 				slidesToShow: 1,
 				slidesToScroll: 1,
@@ -19757,10 +19777,14 @@
 					_react2.default.createElement(
 						'li',
 						null,
-						'Introduction',
 						_react2.default.createElement(
-							'ol',
-							{ className: 'numeric-list' },
+							'a',
+							{ href: '#introduction' },
+							'Introduction'
+						),
+						_react2.default.createElement(
+							'ul',
+							{ className: 'bulleted-list' },
 							_react2.default.createElement(
 								'li',
 								null,
@@ -19776,10 +19800,14 @@
 					_react2.default.createElement(
 						'li',
 						null,
-						'Headings',
 						_react2.default.createElement(
-							'ol',
-							{ className: 'numeric-list' },
+							'a',
+							{ href: '#headings' },
+							'Headings'
+						),
+						_react2.default.createElement(
+							'ul',
+							{ className: 'bulleted-list' },
 							_react2.default.createElement(
 								'li',
 								null,
@@ -19796,11 +19824,115 @@
 								'Heading 3'
 							)
 						)
+					),
+					_react2.default.createElement(
+						'li',
+						null,
+						_react2.default.createElement(
+							'a',
+							{ href: '#form-elements' },
+							'Form Elements'
+						),
+						_react2.default.createElement(
+							'ul',
+							{ className: 'bulleted-list' },
+							_react2.default.createElement(
+								'li',
+								null,
+								'Text Input'
+							)
+						)
+					),
+					_react2.default.createElement(
+						'li',
+						null,
+						_react2.default.createElement(
+							'a',
+							{ href: '#status-indicators' },
+							'Status Indicators'
+						),
+						_react2.default.createElement(
+							'ul',
+							{ className: 'bulleted-list' },
+							_react2.default.createElement(
+								'li',
+								null,
+								'Progress Bar'
+							)
+						)
+					),
+					_react2.default.createElement(
+						'li',
+						null,
+						_react2.default.createElement(
+							'a',
+							{ href: '#media' },
+							'Media'
+						),
+						_react2.default.createElement(
+							'ul',
+							{ className: 'bulleted-list' },
+							_react2.default.createElement(
+								'li',
+								null,
+								'Slick Slider'
+							)
+						)
 					)
 				),
 				_react2.default.createElement(
 					'section',
-					null,
+					{ id: 'introduction' },
+					_react2.default.createElement(
+						'h1',
+						{ className: 'heading-2' },
+						'Introduction'
+					),
+					_react2.default.createElement(
+						'h2',
+						{ className: 'heading-3' },
+						'Rules'
+					),
+					_react2.default.createElement(
+						'ul',
+						{ className: 'bulleted-list' },
+						_react2.default.createElement(
+							'li',
+							null,
+							'Child props should be stateless as often as possible. Parent handles all state.'
+						),
+						_react2.default.createElement(
+							'li',
+							null,
+							'Not every UI Kit component needs to be a React component. If it is a single element and has no interaction, it’s probably okay being just regular old HTML.'
+						)
+					),
+					_react2.default.createElement(
+						'h2',
+						{ className: 'heading-3' },
+						'Resources'
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: 'copy' },
+						_react2.default.createElement(
+							'ul',
+							{ className: 'bulleted-list' },
+							_react2.default.createElement(
+								'li',
+								null,
+								_react2.default.createElement(
+									'a',
+									{ href: 'http://cssguidelin.es/', target: '_blank' },
+									'CSS Guildelin.es'
+								)
+							)
+						)
+					)
+				),
+				_react2.default.createElement(
+					'section',
+					{ id: 'headings' },
 					_react2.default.createElement(
 						'h1',
 						{ className: 'heading-2' },
@@ -19836,11 +19968,11 @@
 				),
 				_react2.default.createElement(
 					'section',
-					null,
+					{ id: 'form-elements' },
 					_react2.default.createElement(
 						'h1',
 						{ className: 'heading-2' },
-						'Text Input'
+						'Form Elements'
 					),
 					_react2.default.createElement(
 						_ComponentViewComponent2.default,
@@ -19859,15 +19991,29 @@
 				),
 				_react2.default.createElement(
 					'section',
-					null,
+					{ id: 'status-indicators' },
 					_react2.default.createElement(
 						'h1',
 						{ className: 'heading-2' },
-						'Slick Slider'
+						'Status Indicators'
 					),
 					_react2.default.createElement(
 						_ComponentViewComponent2.default,
-						{ title: 'Textbox', desc: 'An example of a third party component, styled to fit into the UI kit.' },
+						{ title: 'Progress Bar', desc: 'Text input with various properties for error handling, placeholders, etc.' },
+						_react2.default.createElement(_ProgressBarComponent2.default, { percent: this.state.progress })
+					)
+				),
+				_react2.default.createElement(
+					'section',
+					{ id: 'media' },
+					_react2.default.createElement(
+						'h1',
+						{ className: 'heading-2' },
+						'Media'
+					),
+					_react2.default.createElement(
+						_ComponentViewComponent2.default,
+						{ title: 'Slick Slider', desc: 'An example of a third party component, styled to fit into the UI kit.' },
 						_react2.default.createElement(
 							_reactSlick2.default,
 							_extends({ className: 'slider' }, carouselSettings),
@@ -20195,10 +20341,62 @@
 
 	'use strict';
 
-	module.exports = __webpack_require__(165);
+	exports.__esModule = true;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ProgressBar = function (_Component) {
+		_inherits(ProgressBar, _Component);
+
+		function ProgressBar() {
+			_classCallCheck(this, ProgressBar);
+
+			return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+		}
+
+		ProgressBar.prototype.render = function render() {
+			var progressStyle = {
+				width: this.props.percent + '%'
+			};
+
+			return _react2.default.createElement(
+				'div',
+				{ className: 'progress-bar' },
+				_react2.default.createElement('div', { className: 'progress-bar__progress', style: progressStyle })
+			);
+		};
+
+		return ProgressBar;
+	}(_react.Component);
+
+	ProgressBar.propTypes = {
+		percent: _react.PropTypes.number.isRequired
+	};
+	ProgressBar.defaultProps = {
+		percent: 0
+	};
+	exports.default = ProgressBar;
 
 /***/ },
 /* 165 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	module.exports = __webpack_require__(166);
+
+/***/ },
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20209,21 +20407,21 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _innerSlider = __webpack_require__(166);
+	var _innerSlider = __webpack_require__(167);
 
-	var _objectAssign = __webpack_require__(170);
+	var _objectAssign = __webpack_require__(171);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
-	var _json2mq = __webpack_require__(178);
+	var _json2mq = __webpack_require__(179);
 
 	var _json2mq2 = _interopRequireDefault(_json2mq);
 
-	var _reactResponsiveMixin = __webpack_require__(180);
+	var _reactResponsiveMixin = __webpack_require__(181);
 
 	var _reactResponsiveMixin2 = _interopRequireDefault(_reactResponsiveMixin);
 
-	var _defaultProps = __webpack_require__(174);
+	var _defaultProps = __webpack_require__(175);
 
 	var _defaultProps2 = _interopRequireDefault(_defaultProps);
 
@@ -20300,7 +20498,7 @@
 	module.exports = Slider;
 
 /***/ },
-/* 166 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20317,19 +20515,19 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _mixinsEventHandlers = __webpack_require__(167);
+	var _mixinsEventHandlers = __webpack_require__(168);
 
 	var _mixinsEventHandlers2 = _interopRequireDefault(_mixinsEventHandlers);
 
-	var _mixinsHelpers = __webpack_require__(171);
+	var _mixinsHelpers = __webpack_require__(172);
 
 	var _mixinsHelpers2 = _interopRequireDefault(_mixinsHelpers);
 
-	var _initialState = __webpack_require__(173);
+	var _initialState = __webpack_require__(174);
 
 	var _initialState2 = _interopRequireDefault(_initialState);
 
-	var _defaultProps = __webpack_require__(174);
+	var _defaultProps = __webpack_require__(175);
 
 	var _defaultProps2 = _interopRequireDefault(_defaultProps);
 
@@ -20337,11 +20535,11 @@
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _track = __webpack_require__(175);
+	var _track = __webpack_require__(176);
 
-	var _dots = __webpack_require__(176);
+	var _dots = __webpack_require__(177);
 
-	var _arrows = __webpack_require__(177);
+	var _arrows = __webpack_require__(178);
 
 	var InnerSlider = _react2['default'].createClass({
 	  displayName: 'InnerSlider',
@@ -20489,7 +20687,7 @@
 	exports.InnerSlider = InnerSlider;
 
 /***/ },
-/* 167 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20499,9 +20697,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _trackHelper = __webpack_require__(168);
+	var _trackHelper = __webpack_require__(169);
 
-	var _objectAssign = __webpack_require__(170);
+	var _objectAssign = __webpack_require__(171);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -20655,7 +20853,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 168 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20665,7 +20863,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _ReactDOM = __webpack_require__(169);
+	var _ReactDOM = __webpack_require__(170);
 
 	var _ReactDOM2 = _interopRequireDefault(_ReactDOM);
 
@@ -20781,7 +20979,7 @@
 	exports.getTrackLeft = getTrackLeft;
 
 /***/ },
-/* 169 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20806,7 +21004,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 170 */
+/* 171 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20838,7 +21036,7 @@
 
 
 /***/ },
-/* 171 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20853,17 +21051,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ReactDOM = __webpack_require__(169);
+	var _ReactDOM = __webpack_require__(170);
 
 	var _ReactDOM2 = _interopRequireDefault(_ReactDOM);
 
-	var _reactLibReactTransitionEvents = __webpack_require__(172);
+	var _reactLibReactTransitionEvents = __webpack_require__(173);
 
 	var _reactLibReactTransitionEvents2 = _interopRequireDefault(_reactLibReactTransitionEvents);
 
-	var _trackHelper = __webpack_require__(168);
+	var _trackHelper = __webpack_require__(169);
 
-	var _objectAssign = __webpack_require__(170);
+	var _objectAssign = __webpack_require__(171);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -21128,7 +21326,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 172 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21242,7 +21440,7 @@
 	module.exports = ReactTransitionEvents;
 
 /***/ },
-/* 173 */
+/* 174 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -21292,7 +21490,7 @@
 	module.exports = initialState;
 
 /***/ },
-/* 174 */
+/* 175 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21344,7 +21542,7 @@
 	module.exports = defaultProps;
 
 /***/ },
-/* 175 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21359,7 +21557,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _objectAssign = __webpack_require__(170);
+	var _objectAssign = __webpack_require__(171);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -21493,7 +21691,7 @@
 	exports.Track = Track;
 
 /***/ },
-/* 176 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21572,7 +21770,7 @@
 	exports.Dots = Dots;
 
 /***/ },
-/* 177 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21689,10 +21887,10 @@
 	exports.NextArrow = NextArrow;
 
 /***/ },
-/* 178 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var camel2hyphen = __webpack_require__(179);
+	var camel2hyphen = __webpack_require__(180);
 
 	var isDimension = function (feature) {
 	  var re = /[height|width]$/;
@@ -21745,7 +21943,7 @@
 	module.exports = json2mq;
 
 /***/ },
-/* 179 */
+/* 180 */
 /***/ function(module, exports) {
 
 	var camel2hyphen = function (str) {
@@ -21759,12 +21957,12 @@
 	module.exports = camel2hyphen;
 
 /***/ },
-/* 180 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var canUseDOM = __webpack_require__(181);
-	var enquire = canUseDOM && __webpack_require__(182);
-	var json2mq = __webpack_require__(178);
+	var canUseDOM = __webpack_require__(182);
+	var enquire = canUseDOM && __webpack_require__(183);
+	var json2mq = __webpack_require__(179);
 
 	var ResponsiveMixin = {
 	  media: function (query, handler) {
@@ -21794,7 +21992,7 @@
 	module.exports = ResponsiveMixin;
 
 /***/ },
-/* 181 */
+/* 182 */
 /***/ function(module, exports) {
 
 	var canUseDOM = !!(
@@ -21806,7 +22004,7 @@
 	module.exports = canUseDOM;
 
 /***/ },
-/* 182 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!

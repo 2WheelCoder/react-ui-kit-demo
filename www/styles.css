@@ -270,6 +270,10 @@ li {
 a {
   cursor: pointer;
   text-decoration: none;
+  color: #36608c;
+}
+a:hover {
+  text-decoration: underline;
 }
 button {
   appearance: none;
@@ -340,13 +344,13 @@ input {
 .heading-2 {
   color: #327abb;
   font-size: 1.35em;
-  margin: 1.125em 0 0.5em;
+  margin: 2.25em 0 0.5em;
 }
 .heading-3 {
-  border-bottom: 1px solid #7f7f7f;
+  border-bottom: 1px solid #ccc;
   padding-bottom: 0.45em;
   font-size: 1.05em;
-  margin: 0.5em 0;
+  margin: 1.5em 0 0.5em;
 }
 .numeric-list {
   padding-left: 1.5em;
@@ -355,22 +359,20 @@ input {
   list-style: decimal inside;
   margin-bottom: 0.3em;
 }
-.slick-initialized .slider__item {
-  padding: 2vh 1% 7.5em;
+.progress-bar {
+  height: 1.875em;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  z-index: 3;
 }
-.slick-initialized .slider__item--centered {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.progress-bar__progress {
+  height: 100%;
+  background: #327abb;
+  border-radius: 0.1875rem;
+  transition: width 1s ease;
 }
-.slick-initialized .slider__item--centered img {
-  padding-bottom: 2.2rem;
-  transform: translate3d(0, 0, 0);
+.slider__item {
+  padding: 2vh 1% 7.5em;
 }
 .textbox {
   display: inline-block;
