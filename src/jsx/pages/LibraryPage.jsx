@@ -114,28 +114,44 @@ export default class LibraryPage extends Component {
 
 					<h2 className="heading-3">Resources</h2>
 
-					<p className="copy">
-						<ul className="bulleted-list">
-							<li>
-								<a href="http://cssguidelin.es/" target="_blank">CSS Guildelin.es</a>
-							</li>
-						</ul>
-					</p>
+					<ul className="bulleted-list">
+						<li>
+							<a href="http://cssguidelin.es/" target="_blank">CSS Guildelin.es</a>
+						</li>
+					</ul>
 				</section>
 
 				<section id="headings">
 					<h1 className="heading-2">Headings</h1>
 
 					<ComponentView title="Heading 1" desc="First-level heading">
-						<h1 className="heading-1">This is Heading 1</h1>
+						<div className="component-view__example">
+							<h1 className="heading-1">This is Heading 1</h1>
+						</div>
+
+						<div className="component-view__code">
+							{'<h1 className="heading-1">This is Heading 1</h1>'}
+						</div>
 					</ComponentView>
 
 					<ComponentView title="Heading 2" desc="Second-level heading">
-						<h1 className="heading-2">This is Heading 2</h1>
+						<div className="component-view__example">
+							<h1 className="heading-2">This is Heading 2</h1>
+						</div>
+
+						<div className="component-view__code">
+							{'<h1 className="heading-2">This is Heading 2</h1>'}
+						</div>
 					</ComponentView>
 
 					<ComponentView title="Heading 3" desc="Third-level heading">
-						<h1 className="heading-3">This is Heading 3</h1>
+						<div className="component-view__example">
+							<h1 className="heading-3">This is Heading 3</h1>
+						</div>
+
+						<div className="component-view__code">
+							{'<h1 className="heading-3">This is Heading 3</h1>'}
+						</div>
 					</ComponentView>
 				</section>
 
@@ -143,17 +159,47 @@ export default class LibraryPage extends Component {
 					<h1 className="heading-2">Form Elements</h1>
 
 					<ComponentView title="Textbox" desc="Text input with various properties for error handling, placeholders, etc.">
-						<Textbox
-							placeholder="type here"
-							name="textboxValue"
-							value={this.state.textboxValue}
-							onChange={this.onChange.bind(this)} />
 
-						<Textbox
-							placeholder="type here"
-							name="textboxValue"
-							error={true}
-							value="invalid value" />
+						<div className="component-view__docs">
+							<h2 className="heading-4">Properties</h2>
+
+							<ul className="bulleted-list">
+								<li>{'{'}<strong>placeholder</strong>, <em>string</em>}:'} input placeholder text</li>
+								<li>{'{'}<strong>name</strong>, <em>string</em>}:'} input element name, which will be returned in onChange handler</li>
+								<li>{'{'}<strong>type</strong>, <em>string</em>}:'} input type, ex. text, email, etc.</li>
+								<li>{'{'}<strong>error</strong>, <em>boolean</em>}:'} whether or not the form is in an error state</li>
+								<li>{'{'}<strong>wide</strong>, <em>boolean</em>}:'} should the input span the full-width of its parent?</li>
+								<li>{'{'}<strong>pattern</strong>, <em>string</em>}:'} regex input pattern</li>
+								<li>{'{'}<strong>value</strong>, <em>string</em>}:'} html value of the input element</li>
+								<li>{'{'}<strong>onChange</strong>, <em>function</em>}:'} function to be called when user enters a value into the field</li>
+							</ul>
+						</div>
+
+						<h2 className="heading-4">Examples</h2>
+						<div className="component-view__example">
+							<Textbox
+								placeholder="type here"
+								name="textboxValue"
+								value={this.state.textboxValue}
+								onChange={this.onChange.bind(this)} />
+						</div>
+
+						<div className="component-view__code">
+							{'<Textbox placeholder="type here" name="textboxValue" value={this.state.textboxValue} onChange={this.onChange.bind(this)} />'}
+						</div>
+
+						<div className="component-view__example">
+							<Textbox
+								placeholder="type here"
+								name="textboxValue"
+								value={this.state.textboxValue}
+								onChange={this.onChange.bind(this)}
+								error={true} />
+						</div>
+
+						<div className="component-view__code">
+							{'<Textbox placeholder="type here" name="textboxValue" value={this.state.textboxValue} onChange={this.onChange.bind(this)} error={true} />'}
+						</div>
 					</ComponentView>
 				</section>
 
@@ -161,27 +207,72 @@ export default class LibraryPage extends Component {
 					<h1 className="heading-2">Status Indicators</h1>
 
 					<ComponentView title="Progress Bar" desc="Text input with various properties for error handling, placeholders, etc.">
-						<ProgressBar percent={this.state.progress} />
+						
+						<div className="component-view__docs">
+							<h2 className="heading-4">Properties</h2>
+
+							<ul className="bulleted-list">
+								<li>{'{'}<strong>percent</strong>, <em>number</em>}:'} number representing the percent of completion the progress bar should show, ex. 50</li>
+							</ul>
+						</div>
+
+						<div className="component-view__example">
+							<ProgressBar percent={this.state.progress} />
+						</div>
+
+						<div className="component-view__code">
+							{'<ProgressBar percent={this.state.progress} />'}
+						</div>
 					</ComponentView>
 				</section>
 
 				<section id="media">
 					<h1 className="heading-2">Media</h1>
 
-					<ComponentView title="Slick Slider" desc="An example of a third party component, styled to fit into the UI kit.">
-						<Slider className="slider" {...carouselSettings}>
-							<div className="slider__item">
-								<h2 className="heading-1">Slide 1</h2>
-							</div>
+					<ComponentView title="Slick Slider" desc="An example of a third party component, styled to fit into the UI kit. See https://github.com/akiran/react-slick for additional details on usage.">
 
-							<div className="slider__item">
-								<h2 className="heading-1">Slide 2</h2>
-							</div>
+						<div className="component-view__example">
+							<Slider className="slider" {...carouselSettings}>
+								<div className="slider__item">
+									<h2 className="heading-1">Slide 1</h2>
+								</div>
 
-							<div className="slider__item">
-								<h2 className="heading-1">Slide 3</h2>
-							</div>
-						</Slider>
+								<div className="slider__item">
+									<h2 className="heading-1">Slide 2</h2>
+								</div>
+
+								<div className="slider__item">
+									<h2 className="heading-1">Slide 3</h2>
+								</div>
+							</Slider>
+						</div>
+
+						<pre className="component-view__code">							
+{`const carouselSettings = {
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false
+}
+
+<Slider className="slider" {...carouselSettings}>
+    <div className="slider__item">
+        <h2 className="heading-1">Slide 1</h2>
+    </div>
+
+    <div className="slider__item">
+        <h2 className="heading-1">Slide 2</h2>
+    </div>
+
+    <div className="slider__item">
+        <h2 className="heading-1">Slide 3</h2>
+    </div>
+</Slider>`}
+						</pre>
 					</ComponentView>
 				</section>
 			</section>

@@ -11,23 +11,23 @@ export default class ButtonComponent extends Component {
 	};
 
 	render () {
-		const children = (() => {
-			if (this.props.children.length) {
-				return this.props.children.map((child, index) => {
-					return (
-						<li key={index} className="component-view__example">
-							{child}
-						</li>
-					)
-				})
-			} else {
-				return (
-					<li className="component-view__example">
-						{this.props.children}
-					</li>
-				)
-			}
-		})()
+		// const children = (() => {
+		// 	if (this.props.children.length) {
+		// 		return this.props.children.map((child, index) => {
+		// 			return (
+		// 				<li key={index} className="component-view__example">
+		// 					{child}
+		// 				</li>
+		// 			)
+		// 		})
+		// 	} else {
+		// 		return (
+		// 			<li className="component-view__example">
+		// 				{this.props.children}
+		// 			</li>
+		// 		)
+		// 	}
+		// })()
 
 		return (
 			<section className="component-view">
@@ -37,13 +37,7 @@ export default class ButtonComponent extends Component {
 					{this.props.desc}
 				</p>
 
-				<div className="component-view__docs">
-
-				</div>
-
-				<ul className="component-view__examples">
-					{children}
-				</ul>
+				{this.props.children}
 			</section>
 		)
 	}

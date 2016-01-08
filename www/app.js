@@ -19913,19 +19913,15 @@
 						'Resources'
 					),
 					_react2.default.createElement(
-						'p',
-						{ className: 'copy' },
+						'ul',
+						{ className: 'bulleted-list' },
 						_react2.default.createElement(
-							'ul',
-							{ className: 'bulleted-list' },
+							'li',
+							null,
 							_react2.default.createElement(
-								'li',
-								null,
-								_react2.default.createElement(
-									'a',
-									{ href: 'http://cssguidelin.es/', target: '_blank' },
-									'CSS Guildelin.es'
-								)
+								'a',
+								{ href: 'http://cssguidelin.es/', target: '_blank' },
+								'CSS Guildelin.es'
 							)
 						)
 					)
@@ -19942,27 +19938,54 @@
 						_ComponentViewComponent2.default,
 						{ title: 'Heading 1', desc: 'First-level heading' },
 						_react2.default.createElement(
-							'h1',
-							{ className: 'heading-1' },
-							'This is Heading 1'
+							'div',
+							{ className: 'component-view__example' },
+							_react2.default.createElement(
+								'h1',
+								{ className: 'heading-1' },
+								'This is Heading 1'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'component-view__code' },
+							'<h1 className="heading-1">This is Heading 1</h1>'
 						)
 					),
 					_react2.default.createElement(
 						_ComponentViewComponent2.default,
 						{ title: 'Heading 2', desc: 'Second-level heading' },
 						_react2.default.createElement(
-							'h1',
-							{ className: 'heading-2' },
-							'This is Heading 2'
+							'div',
+							{ className: 'component-view__example' },
+							_react2.default.createElement(
+								'h1',
+								{ className: 'heading-2' },
+								'This is Heading 2'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'component-view__code' },
+							'<h1 className="heading-2">This is Heading 2</h1>'
 						)
 					),
 					_react2.default.createElement(
 						_ComponentViewComponent2.default,
 						{ title: 'Heading 3', desc: 'Third-level heading' },
 						_react2.default.createElement(
-							'h1',
-							{ className: 'heading-3' },
-							'This is Heading 3'
+							'div',
+							{ className: 'component-view__example' },
+							_react2.default.createElement(
+								'h1',
+								{ className: 'heading-3' },
+								'This is Heading 3'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'component-view__code' },
+							'<h1 className="heading-3">This is Heading 3</h1>'
 						)
 					)
 				),
@@ -19977,16 +20000,189 @@
 					_react2.default.createElement(
 						_ComponentViewComponent2.default,
 						{ title: 'Textbox', desc: 'Text input with various properties for error handling, placeholders, etc.' },
-						_react2.default.createElement(_TextboxComponent2.default, {
-							placeholder: 'type here',
-							name: 'textboxValue',
-							value: this.state.textboxValue,
-							onChange: this.onChange.bind(this) }),
-						_react2.default.createElement(_TextboxComponent2.default, {
-							placeholder: 'type here',
-							name: 'textboxValue',
-							error: true,
-							value: 'invalid value' })
+						_react2.default.createElement(
+							'div',
+							{ className: 'component-view__docs' },
+							_react2.default.createElement(
+								'h2',
+								{ className: 'heading-4' },
+								'Properties'
+							),
+							_react2.default.createElement(
+								'ul',
+								{ className: 'bulleted-list' },
+								_react2.default.createElement(
+									'li',
+									null,
+									'{',
+									_react2.default.createElement(
+										'strong',
+										null,
+										'placeholder'
+									),
+									', ',
+									_react2.default.createElement(
+										'em',
+										null,
+										'string'
+									),
+									'}:\'} input placeholder text'
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									'{',
+									_react2.default.createElement(
+										'strong',
+										null,
+										'name'
+									),
+									', ',
+									_react2.default.createElement(
+										'em',
+										null,
+										'string'
+									),
+									'}:\'} input element name, which will be returned in onChange handler'
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									'{',
+									_react2.default.createElement(
+										'strong',
+										null,
+										'type'
+									),
+									', ',
+									_react2.default.createElement(
+										'em',
+										null,
+										'string'
+									),
+									'}:\'} input type, ex. text, email, etc.'
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									'{',
+									_react2.default.createElement(
+										'strong',
+										null,
+										'error'
+									),
+									', ',
+									_react2.default.createElement(
+										'em',
+										null,
+										'boolean'
+									),
+									'}:\'} whether or not the form is in an error state'
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									'{',
+									_react2.default.createElement(
+										'strong',
+										null,
+										'wide'
+									),
+									', ',
+									_react2.default.createElement(
+										'em',
+										null,
+										'boolean'
+									),
+									'}:\'} should the input span the full-width of its parent?'
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									'{',
+									_react2.default.createElement(
+										'strong',
+										null,
+										'pattern'
+									),
+									', ',
+									_react2.default.createElement(
+										'em',
+										null,
+										'string'
+									),
+									'}:\'} regex input pattern'
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									'{',
+									_react2.default.createElement(
+										'strong',
+										null,
+										'value'
+									),
+									', ',
+									_react2.default.createElement(
+										'em',
+										null,
+										'string'
+									),
+									'}:\'} html value of the input element'
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									'{',
+									_react2.default.createElement(
+										'strong',
+										null,
+										'onChange'
+									),
+									', ',
+									_react2.default.createElement(
+										'em',
+										null,
+										'function'
+									),
+									'}:\'} function to be called when user enters a value into the field'
+								)
+							)
+						),
+						_react2.default.createElement(
+							'h2',
+							{ className: 'heading-4' },
+							'Examples'
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'component-view__example' },
+							_react2.default.createElement(_TextboxComponent2.default, {
+								placeholder: 'type here',
+								name: 'textboxValue',
+								value: this.state.textboxValue,
+								onChange: this.onChange.bind(this) })
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'component-view__code' },
+							'<Textbox placeholder="type here" name="textboxValue" value={this.state.textboxValue} onChange={this.onChange.bind(this)} />'
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'component-view__example' },
+							_react2.default.createElement(_TextboxComponent2.default, {
+								placeholder: 'type here',
+								name: 'textboxValue',
+								value: this.state.textboxValue,
+								onChange: this.onChange.bind(this),
+								error: true })
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'component-view__code' },
+							'<Textbox placeholder="type here" name="textboxValue" value={this.state.textboxValue} onChange={this.onChange.bind(this)} error={true} />'
+						)
 					)
 				),
 				_react2.default.createElement(
@@ -20000,7 +20196,46 @@
 					_react2.default.createElement(
 						_ComponentViewComponent2.default,
 						{ title: 'Progress Bar', desc: 'Text input with various properties for error handling, placeholders, etc.' },
-						_react2.default.createElement(_ProgressBarComponent2.default, { percent: this.state.progress })
+						_react2.default.createElement(
+							'div',
+							{ className: 'component-view__docs' },
+							_react2.default.createElement(
+								'h2',
+								{ className: 'heading-4' },
+								'Properties'
+							),
+							_react2.default.createElement(
+								'ul',
+								{ className: 'bulleted-list' },
+								_react2.default.createElement(
+									'li',
+									null,
+									'{',
+									_react2.default.createElement(
+										'strong',
+										null,
+										'percent'
+									),
+									', ',
+									_react2.default.createElement(
+										'em',
+										null,
+										'number'
+									),
+									'}:\'} number representing the percent of completion the progress bar should show, ex. 50'
+								)
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'component-view__example' },
+							_react2.default.createElement(_ProgressBarComponent2.default, { percent: this.state.progress })
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'component-view__code' },
+							'<ProgressBar percent={this.state.progress} />'
+						)
 					)
 				),
 				_react2.default.createElement(
@@ -20013,37 +20248,46 @@
 					),
 					_react2.default.createElement(
 						_ComponentViewComponent2.default,
-						{ title: 'Slick Slider', desc: 'An example of a third party component, styled to fit into the UI kit.' },
+						{ title: 'Slick Slider', desc: 'An example of a third party component, styled to fit into the UI kit. See https://github.com/akiran/react-slick for additional details on usage.' },
 						_react2.default.createElement(
-							_reactSlick2.default,
-							_extends({ className: 'slider' }, carouselSettings),
+							'div',
+							{ className: 'component-view__example' },
 							_react2.default.createElement(
-								'div',
-								{ className: 'slider__item' },
+								_reactSlick2.default,
+								_extends({ className: 'slider' }, carouselSettings),
 								_react2.default.createElement(
-									'h2',
-									{ className: 'heading-1' },
-									'Slide 1'
-								)
-							),
-							_react2.default.createElement(
-								'div',
-								{ className: 'slider__item' },
+									'div',
+									{ className: 'slider__item' },
+									_react2.default.createElement(
+										'h2',
+										{ className: 'heading-1' },
+										'Slide 1'
+									)
+								),
 								_react2.default.createElement(
-									'h2',
-									{ className: 'heading-1' },
-									'Slide 2'
-								)
-							),
-							_react2.default.createElement(
-								'div',
-								{ className: 'slider__item' },
+									'div',
+									{ className: 'slider__item' },
+									_react2.default.createElement(
+										'h2',
+										{ className: 'heading-1' },
+										'Slide 2'
+									)
+								),
 								_react2.default.createElement(
-									'h2',
-									{ className: 'heading-1' },
-									'Slide 3'
+									'div',
+									{ className: 'slider__item' },
+									_react2.default.createElement(
+										'h2',
+										{ className: 'heading-1' },
+										'Slide 3'
+									)
 								)
 							)
+						),
+						_react2.default.createElement(
+							'pre',
+							{ className: 'component-view__code' },
+							'const carouselSettings = {\n    autoplay: true,\n    autoplaySpeed: 3000,\n    dots: true,\n    infinite: true,\n    speed: 500,\n    slidesToShow: 1,\n    slidesToScroll: 1,\n    arrows: false\n}\n\n<Slider className="slider" {...carouselSettings}>\n    <div className="slider__item">\n        <h2 className="heading-1">Slide 1</h2>\n    </div>\n\n    <div className="slider__item">\n        <h2 className="heading-1">Slide 2</h2>\n    </div>\n\n    <div className="slider__item">\n        <h2 className="heading-1">Slide 3</h2>\n    </div>\n</Slider>'
 						)
 					)
 				)
@@ -20198,25 +20442,23 @@
 		}
 
 		ButtonComponent.prototype.render = function render() {
-			var _this2 = this;
-
-			var children = function () {
-				if (_this2.props.children.length) {
-					return _this2.props.children.map(function (child, index) {
-						return _react2.default.createElement(
-							'li',
-							{ key: index, className: 'component-view__example' },
-							child
-						);
-					});
-				} else {
-					return _react2.default.createElement(
-						'li',
-						{ className: 'component-view__example' },
-						_this2.props.children
-					);
-				}
-			}();
+			// const children = (() => {
+			// 	if (this.props.children.length) {
+			// 		return this.props.children.map((child, index) => {
+			// 			return (
+			// 				<li key={index} className="component-view__example">
+			// 					{child}
+			// 				</li>
+			// 			)
+			// 		})
+			// 	} else {
+			// 		return (
+			// 			<li className="component-view__example">
+			// 				{this.props.children}
+			// 			</li>
+			// 		)
+			// 	}
+			// })()
 
 			return _react2.default.createElement(
 				'section',
@@ -20231,12 +20473,7 @@
 					{ className: 'component-view__desc' },
 					this.props.desc
 				),
-				_react2.default.createElement('div', { className: 'component-view__docs' }),
-				_react2.default.createElement(
-					'ul',
-					{ className: 'component-view__examples' },
-					children
-				)
+				this.props.children
 			);
 		};
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import LibraryPage from './pages/LibraryPage.jsx'
+import LibraryPage from './pages/LibraryPage'
 
 class UIKit {
 	constructor() {

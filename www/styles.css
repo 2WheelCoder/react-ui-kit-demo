@@ -291,7 +291,7 @@ strong {
   font-weight: bold;
 }
 em {
-  text-decoration: underline;
+  font-style: italic;
 }
 h1,
 h2,
@@ -352,6 +352,11 @@ input {
   font-size: 1.05em;
   margin: 1.5em 0 0.5em;
 }
+.heading-4 {
+  padding-bottom: 0.45em;
+  font-size: 1.05em;
+  margin: 1.5em 0 0.5em;
+}
 .numeric-list {
   padding-left: 1.5em;
 }
@@ -371,7 +376,8 @@ input {
   border-radius: 0.1875rem;
   transition: width 1s ease;
 }
-.slider__item {
+.slider__item,
+.slider .slick-cloned {
   padding: 2vh 1% 7.5em;
 }
 .textbox {
@@ -407,11 +413,24 @@ input {
 }
 .component-view__example {
   border: 1px solid #ebebeb;
-  border-radius: 0.1875rem;
-  margin: 0 5% 0.75em;
+  border-top-right-radius: 0.1875rem;
+  border-top-left-radius: 0.1875rem;
+  margin: 0 2.35%;
   padding: 0.5em 0.75em;
 }
 .component-view__desc {
   line-height: 1.3;
   margin-bottom: 1.5em;
+}
+.component-view__docs {
+  margin: 0.5em 0;
+}
+.component-view__code {
+  background: #ebebeb;
+  margin: 0 2.35% 0.75em;
+  padding: 0.5em 0.75em;
+  font-family: Monaco, sans-serif;
+  line-height: 1.5;
+  border-bottom-right-radius: 0.1875rem;
+  border-bottom-left-radius: 0.1875rem;
 }
