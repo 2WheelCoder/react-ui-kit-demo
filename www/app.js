@@ -19671,33 +19671,39 @@
 
 	'use strict';
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 	exports.__esModule = true;
 
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Heading1Component = __webpack_require__(160);
+	var _TableOfContents = __webpack_require__(160);
 
-	var _Heading1Component2 = _interopRequireDefault(_Heading1Component);
+	var _TableOfContents2 = _interopRequireDefault(_TableOfContents);
 
-	var _ComponentViewComponent = __webpack_require__(162);
+	var _Introduction = __webpack_require__(161);
+
+	var _Introduction2 = _interopRequireDefault(_Introduction);
+
+	var _ComponentDocs = __webpack_require__(162);
+
+	var _ComponentDocs2 = _interopRequireDefault(_ComponentDocs);
+
+	var _ComponentViewComponent = __webpack_require__(163);
 
 	var _ComponentViewComponent2 = _interopRequireDefault(_ComponentViewComponent);
 
-	var _TextboxComponent = __webpack_require__(163);
+	var _TextboxComponentExample = __webpack_require__(164);
 
-	var _TextboxComponent2 = _interopRequireDefault(_TextboxComponent);
+	var _TextboxComponentExample2 = _interopRequireDefault(_TextboxComponentExample);
 
-	var _ProgressBarComponent = __webpack_require__(164);
+	var _SliderComponentExample = __webpack_require__(167);
 
-	var _ProgressBarComponent2 = _interopRequireDefault(_ProgressBarComponent);
+	var _SliderComponentExample2 = _interopRequireDefault(_SliderComponentExample);
 
-	var _reactSlick = __webpack_require__(165);
+	var _ProgressBarComponentExample = __webpack_require__(187);
 
-	var _reactSlick2 = _interopRequireDefault(_reactSlick);
+	var _ProgressBarComponentExample2 = _interopRequireDefault(_ProgressBarComponentExample);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19710,222 +19716,28 @@
 	var LibraryPage = function (_Component) {
 		_inherits(LibraryPage, _Component);
 
-		function LibraryPage(props) {
+		function LibraryPage() {
 			_classCallCheck(this, LibraryPage);
 
-			var _this = _possibleConstructorReturn(this, _Component.call(this, props));
-
-			_this.state = {
-				textboxValue: '',
-				progress: 25
-			};
-
-			_this.moveProgressBar();
-			return _this;
+			return _possibleConstructorReturn(this, _Component.apply(this, arguments));
 		}
 
-		LibraryPage.prototype.onChange = function onChange(prop, val) {
-			this.setState(function (prevState) {
-				var newState = {};
-				newState[prop] = val;
-				return newState;
-			});
-		};
-
-		LibraryPage.prototype.moveProgressBar = function moveProgressBar() {
-			var _this2 = this;
-
-			setInterval(function () {
-				_this2.setState(function (prevState) {
-					return {
-						textboxValue: prevState.textboxValue,
-						progress: prevState.progress === 25 ? 68 : 25
-					};
-				});
-			}, 2000);
-		};
-
 		LibraryPage.prototype.render = function render() {
-			var carouselSettings = {
-				autoplay: true,
-				autoplaySpeed: 3000,
-				dots: true,
-				infinite: true,
-				speed: 500,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false
-			};
-
 			return _react2.default.createElement(
 				'section',
 				{ className: 'page library-page' },
-				_react2.default.createElement(_Heading1Component2.default, { content: 'React UI Kit Demo', centered: true }),
+				_react2.default.createElement(
+					'h1',
+					{ className: 'heading-1' },
+					'React UI Kit Demo'
+				),
 				_react2.default.createElement(
 					'p',
 					{ className: 'copy' },
 					'Welcome to the React UI Kit Demo. The purpose of this demo is to demonstrate how React can be compenetized and used as UI Kit.'
 				),
-				_react2.default.createElement(
-					'h2',
-					{ className: 'heading-2' },
-					'Table of Contents'
-				),
-				_react2.default.createElement(
-					'ul',
-					{ className: 'bulleted-list' },
-					_react2.default.createElement(
-						'li',
-						null,
-						_react2.default.createElement(
-							'a',
-							{ href: '#introduction' },
-							'Introduction'
-						),
-						_react2.default.createElement(
-							'ul',
-							{ className: 'bulleted-list' },
-							_react2.default.createElement(
-								'li',
-								null,
-								'Rules'
-							),
-							_react2.default.createElement(
-								'li',
-								null,
-								'Resources'
-							)
-						)
-					),
-					_react2.default.createElement(
-						'li',
-						null,
-						_react2.default.createElement(
-							'a',
-							{ href: '#headings' },
-							'Headings'
-						),
-						_react2.default.createElement(
-							'ul',
-							{ className: 'bulleted-list' },
-							_react2.default.createElement(
-								'li',
-								null,
-								'Heading 1'
-							),
-							_react2.default.createElement(
-								'li',
-								null,
-								'Heading 2'
-							),
-							_react2.default.createElement(
-								'li',
-								null,
-								'Heading 3'
-							)
-						)
-					),
-					_react2.default.createElement(
-						'li',
-						null,
-						_react2.default.createElement(
-							'a',
-							{ href: '#form-elements' },
-							'Form Elements'
-						),
-						_react2.default.createElement(
-							'ul',
-							{ className: 'bulleted-list' },
-							_react2.default.createElement(
-								'li',
-								null,
-								'Text Input'
-							)
-						)
-					),
-					_react2.default.createElement(
-						'li',
-						null,
-						_react2.default.createElement(
-							'a',
-							{ href: '#status-indicators' },
-							'Status Indicators'
-						),
-						_react2.default.createElement(
-							'ul',
-							{ className: 'bulleted-list' },
-							_react2.default.createElement(
-								'li',
-								null,
-								'Progress Bar'
-							)
-						)
-					),
-					_react2.default.createElement(
-						'li',
-						null,
-						_react2.default.createElement(
-							'a',
-							{ href: '#media' },
-							'Media'
-						),
-						_react2.default.createElement(
-							'ul',
-							{ className: 'bulleted-list' },
-							_react2.default.createElement(
-								'li',
-								null,
-								'Slick Slider'
-							)
-						)
-					)
-				),
-				_react2.default.createElement(
-					'section',
-					{ id: 'introduction' },
-					_react2.default.createElement(
-						'h1',
-						{ className: 'heading-2' },
-						'Introduction'
-					),
-					_react2.default.createElement(
-						'h2',
-						{ className: 'heading-3' },
-						'Rules'
-					),
-					_react2.default.createElement(
-						'ul',
-						{ className: 'bulleted-list' },
-						_react2.default.createElement(
-							'li',
-							null,
-							'Child props should be stateless as often as possible. Parent handles all state.'
-						),
-						_react2.default.createElement(
-							'li',
-							null,
-							'Not every UI Kit component needs to be a React component. If it is a single element and has no interaction, it’s probably okay being just regular old HTML.'
-						)
-					),
-					_react2.default.createElement(
-						'h2',
-						{ className: 'heading-3' },
-						'Resources'
-					),
-					_react2.default.createElement(
-						'ul',
-						{ className: 'bulleted-list' },
-						_react2.default.createElement(
-							'li',
-							null,
-							_react2.default.createElement(
-								'a',
-								{ href: 'http://cssguidelin.es/', target: '_blank' },
-								'CSS Guildelin.es'
-							)
-						)
-					)
-				),
+				_react2.default.createElement(_TableOfContents2.default, null),
+				_react2.default.createElement(_Introduction2.default, null),
 				_react2.default.createElement(
 					'section',
 					{ id: 'headings' },
@@ -19999,190 +19811,8 @@
 					),
 					_react2.default.createElement(
 						_ComponentViewComponent2.default,
-						{ title: 'Textbox', desc: 'Text input with various properties for error handling, placeholders, etc.' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'component-view__docs' },
-							_react2.default.createElement(
-								'h2',
-								{ className: 'heading-4' },
-								'Properties'
-							),
-							_react2.default.createElement(
-								'ul',
-								{ className: 'bulleted-list' },
-								_react2.default.createElement(
-									'li',
-									null,
-									'{',
-									_react2.default.createElement(
-										'strong',
-										null,
-										'placeholder'
-									),
-									', ',
-									_react2.default.createElement(
-										'em',
-										null,
-										'string'
-									),
-									'}:\'} input placeholder text'
-								),
-								_react2.default.createElement(
-									'li',
-									null,
-									'{',
-									_react2.default.createElement(
-										'strong',
-										null,
-										'name'
-									),
-									', ',
-									_react2.default.createElement(
-										'em',
-										null,
-										'string'
-									),
-									'}:\'} input element name, which will be returned in onChange handler'
-								),
-								_react2.default.createElement(
-									'li',
-									null,
-									'{',
-									_react2.default.createElement(
-										'strong',
-										null,
-										'type'
-									),
-									', ',
-									_react2.default.createElement(
-										'em',
-										null,
-										'string'
-									),
-									'}:\'} input type, ex. text, email, etc.'
-								),
-								_react2.default.createElement(
-									'li',
-									null,
-									'{',
-									_react2.default.createElement(
-										'strong',
-										null,
-										'error'
-									),
-									', ',
-									_react2.default.createElement(
-										'em',
-										null,
-										'boolean'
-									),
-									'}:\'} whether or not the form is in an error state'
-								),
-								_react2.default.createElement(
-									'li',
-									null,
-									'{',
-									_react2.default.createElement(
-										'strong',
-										null,
-										'wide'
-									),
-									', ',
-									_react2.default.createElement(
-										'em',
-										null,
-										'boolean'
-									),
-									'}:\'} should the input span the full-width of its parent?'
-								),
-								_react2.default.createElement(
-									'li',
-									null,
-									'{',
-									_react2.default.createElement(
-										'strong',
-										null,
-										'pattern'
-									),
-									', ',
-									_react2.default.createElement(
-										'em',
-										null,
-										'string'
-									),
-									'}:\'} regex input pattern'
-								),
-								_react2.default.createElement(
-									'li',
-									null,
-									'{',
-									_react2.default.createElement(
-										'strong',
-										null,
-										'value'
-									),
-									', ',
-									_react2.default.createElement(
-										'em',
-										null,
-										'string'
-									),
-									'}:\'} html value of the input element'
-								),
-								_react2.default.createElement(
-									'li',
-									null,
-									'{',
-									_react2.default.createElement(
-										'strong',
-										null,
-										'onChange'
-									),
-									', ',
-									_react2.default.createElement(
-										'em',
-										null,
-										'function'
-									),
-									'}:\'} function to be called when user enters a value into the field'
-								)
-							)
-						),
-						_react2.default.createElement(
-							'h2',
-							{ className: 'heading-4' },
-							'Examples'
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'component-view__example' },
-							_react2.default.createElement(_TextboxComponent2.default, {
-								placeholder: 'type here',
-								name: 'textboxValue',
-								value: this.state.textboxValue,
-								onChange: this.onChange.bind(this) })
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'component-view__code' },
-							'<Textbox placeholder="type here" name="textboxValue" value={this.state.textboxValue} onChange={this.onChange.bind(this)} />'
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'component-view__example' },
-							_react2.default.createElement(_TextboxComponent2.default, {
-								placeholder: 'type here',
-								name: 'textboxValue',
-								value: this.state.textboxValue,
-								onChange: this.onChange.bind(this),
-								error: true })
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'component-view__code' },
-							'<Textbox placeholder="type here" name="textboxValue" value={this.state.textboxValue} onChange={this.onChange.bind(this)} error={true} />'
-						)
+						{ title: 'Textbox', docs: _ComponentDocs2.default['TextboxComponent.jsx'] },
+						_react2.default.createElement(_TextboxComponentExample2.default, null)
 					)
 				),
 				_react2.default.createElement(
@@ -20195,47 +19825,8 @@
 					),
 					_react2.default.createElement(
 						_ComponentViewComponent2.default,
-						{ title: 'Progress Bar', desc: 'Text input with various properties for error handling, placeholders, etc.' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'component-view__docs' },
-							_react2.default.createElement(
-								'h2',
-								{ className: 'heading-4' },
-								'Properties'
-							),
-							_react2.default.createElement(
-								'ul',
-								{ className: 'bulleted-list' },
-								_react2.default.createElement(
-									'li',
-									null,
-									'{',
-									_react2.default.createElement(
-										'strong',
-										null,
-										'percent'
-									),
-									', ',
-									_react2.default.createElement(
-										'em',
-										null,
-										'number'
-									),
-									'}:\'} number representing the percent of completion the progress bar should show, ex. 50'
-								)
-							)
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'component-view__example' },
-							_react2.default.createElement(_ProgressBarComponent2.default, { percent: this.state.progress })
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'component-view__code' },
-							'<ProgressBar percent={this.state.progress} />'
-						)
+						{ title: 'Progress Bar', docs: _ComponentDocs2.default['ProgressBarComponent.jsx'] },
+						_react2.default.createElement(_ProgressBarComponentExample2.default, null)
 					)
 				),
 				_react2.default.createElement(
@@ -20249,46 +19840,7 @@
 					_react2.default.createElement(
 						_ComponentViewComponent2.default,
 						{ title: 'Slick Slider', desc: 'An example of a third party component, styled to fit into the UI kit. See https://github.com/akiran/react-slick for additional details on usage.' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'component-view__example' },
-							_react2.default.createElement(
-								_reactSlick2.default,
-								_extends({ className: 'slider' }, carouselSettings),
-								_react2.default.createElement(
-									'div',
-									{ className: 'slider__item' },
-									_react2.default.createElement(
-										'h2',
-										{ className: 'heading-1' },
-										'Slide 1'
-									)
-								),
-								_react2.default.createElement(
-									'div',
-									{ className: 'slider__item' },
-									_react2.default.createElement(
-										'h2',
-										{ className: 'heading-1' },
-										'Slide 2'
-									)
-								),
-								_react2.default.createElement(
-									'div',
-									{ className: 'slider__item' },
-									_react2.default.createElement(
-										'h2',
-										{ className: 'heading-1' },
-										'Slide 3'
-									)
-								)
-							)
-						),
-						_react2.default.createElement(
-							'pre',
-							{ className: 'component-view__code' },
-							'const carouselSettings = {\n    autoplay: true,\n    autoplaySpeed: 3000,\n    dots: true,\n    infinite: true,\n    speed: 500,\n    slidesToShow: 1,\n    slidesToScroll: 1,\n    arrows: false\n}\n\n<Slider className="slider" {...carouselSettings}>\n    <div className="slider__item">\n        <h2 className="heading-1">Slide 1</h2>\n    </div>\n\n    <div className="slider__item">\n        <h2 className="heading-1">Slide 2</h2>\n    </div>\n\n    <div className="slider__item">\n        <h2 className="heading-1">Slide 3</h2>\n    </div>\n</Slider>'
-						)
+						_react2.default.createElement(_SliderComponentExample2.default, null)
 					)
 				)
 			);
@@ -20303,6 +19855,401 @@
 /* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
+	"use strict";
+
+	exports.__esModule = true;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var TableOfContents = function (_Component) {
+		_inherits(TableOfContents, _Component);
+
+		function TableOfContents() {
+			_classCallCheck(this, TableOfContents);
+
+			return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+		}
+
+		TableOfContents.prototype.render = function render() {
+			return _react2.default.createElement(
+				"div",
+				null,
+				_react2.default.createElement(
+					"h2",
+					{ className: "heading-2" },
+					"Table of Contents"
+				),
+				_react2.default.createElement(
+					"ul",
+					{ className: "bulleted-list" },
+					_react2.default.createElement(
+						"li",
+						null,
+						_react2.default.createElement(
+							"a",
+							{ href: "#introduction" },
+							"Introduction"
+						),
+						_react2.default.createElement(
+							"ul",
+							{ className: "bulleted-list" },
+							_react2.default.createElement(
+								"li",
+								null,
+								"Rules"
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								"Resources"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"li",
+						null,
+						_react2.default.createElement(
+							"a",
+							{ href: "#headings" },
+							"Headings"
+						),
+						_react2.default.createElement(
+							"ul",
+							{ className: "bulleted-list" },
+							_react2.default.createElement(
+								"li",
+								null,
+								"Heading 1"
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								"Heading 2"
+							),
+							_react2.default.createElement(
+								"li",
+								null,
+								"Heading 3"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"li",
+						null,
+						_react2.default.createElement(
+							"a",
+							{ href: "#form-elements" },
+							"Form Elements"
+						),
+						_react2.default.createElement(
+							"ul",
+							{ className: "bulleted-list" },
+							_react2.default.createElement(
+								"li",
+								null,
+								"Text Input"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"li",
+						null,
+						_react2.default.createElement(
+							"a",
+							{ href: "#status-indicators" },
+							"Status Indicators"
+						),
+						_react2.default.createElement(
+							"ul",
+							{ className: "bulleted-list" },
+							_react2.default.createElement(
+								"li",
+								null,
+								"Progress Bar"
+							)
+						)
+					),
+					_react2.default.createElement(
+						"li",
+						null,
+						_react2.default.createElement(
+							"a",
+							{ href: "#media" },
+							"Media"
+						),
+						_react2.default.createElement(
+							"ul",
+							{ className: "bulleted-list" },
+							_react2.default.createElement(
+								"li",
+								null,
+								"Slick Slider"
+							)
+						)
+					)
+				)
+			);
+		};
+
+		return TableOfContents;
+	}(_react.Component);
+
+	exports.default = TableOfContents;
+
+/***/ },
+/* 161 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	exports.__esModule = true;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Introduction = function (_Component) {
+		_inherits(Introduction, _Component);
+
+		function Introduction() {
+			_classCallCheck(this, Introduction);
+
+			return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+		}
+
+		Introduction.prototype.render = function render() {
+			return _react2.default.createElement(
+				"section",
+				{ id: "introduction" },
+				_react2.default.createElement(
+					"h1",
+					{ className: "heading-2" },
+					"Introduction"
+				),
+				_react2.default.createElement(
+					"h2",
+					{ className: "heading-3" },
+					"Rules"
+				),
+				_react2.default.createElement(
+					"ul",
+					{ className: "bulleted-list" },
+					_react2.default.createElement(
+						"li",
+						null,
+						"Child props should be stateless as often as possible. Parent handles all state."
+					),
+					_react2.default.createElement(
+						"li",
+						null,
+						"Not every UI Kit component needs to be a React component. If it is a single element and has no interaction, it’s probably okay being just regular old HTML."
+					)
+				),
+				_react2.default.createElement(
+					"h2",
+					{ className: "heading-3" },
+					"Resources"
+				),
+				_react2.default.createElement(
+					"ul",
+					{ className: "bulleted-list" },
+					_react2.default.createElement(
+						"li",
+						null,
+						_react2.default.createElement(
+							"a",
+							{ href: "http://cssguidelin.es/", target: "_blank" },
+							"CSS Guildelin.es"
+						)
+					)
+				)
+			);
+		};
+
+		return Introduction;
+	}(_react.Component);
+
+	exports.default = Introduction;
+
+/***/ },
+/* 162 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"ButtonComponent.jsx": {
+			"description": "",
+			"props": {
+				"string": {
+					"type": {
+						"name": "string"
+					},
+					"required": true,
+					"description": ""
+				},
+				"onClick": {
+					"type": {
+						"name": "func"
+					},
+					"required": true,
+					"description": ""
+				}
+			}
+		},
+		"Heading1Component.jsx": {
+			"description": "",
+			"props": {
+				"content": {
+					"type": {
+						"name": "string"
+					},
+					"required": true,
+					"description": "",
+					"defaultValue": {
+						"value": "'missing heading 1 content'",
+						"computed": false
+					}
+				},
+				"centered": {
+					"type": {
+						"name": "bool"
+					},
+					"required": false,
+					"description": "",
+					"defaultValue": {
+						"value": "false",
+						"computed": false
+					}
+				}
+			}
+		},
+		"ProgressBarComponent.jsx": {
+			"description": "Progress bar that animates on completion change",
+			"props": {
+				"percent": {
+					"type": {
+						"name": "number"
+					},
+					"required": true,
+					"description": "number representing the percent of completion the progress bar should show, ex. 50",
+					"defaultValue": {
+						"value": "0",
+						"computed": false
+					}
+				}
+			}
+		},
+		"TextboxComponent.jsx": {
+			"description": "Text input with various properties for error handling, placeholders, etc.",
+			"props": {
+				"placeholder": {
+					"type": {
+						"name": "string"
+					},
+					"required": true,
+					"description": "input placeholder text",
+					"defaultValue": {
+						"value": "'Placeholder'",
+						"computed": false
+					}
+				},
+				"name": {
+					"type": {
+						"name": "string"
+					},
+					"required": true,
+					"description": "input element name, which will be returned in onChange handler",
+					"defaultValue": {
+						"value": "'property'",
+						"computed": false
+					}
+				},
+				"type": {
+					"type": {
+						"name": "string"
+					},
+					"required": false,
+					"description": "html input type; ex. text, email, etc.",
+					"defaultValue": {
+						"value": "'text'",
+						"computed": false
+					}
+				},
+				"error": {
+					"type": {
+						"name": "bool"
+					},
+					"required": false,
+					"description": "whether or not the form is in an error state",
+					"defaultValue": {
+						"value": "false",
+						"computed": false
+					}
+				},
+				"wide": {
+					"type": {
+						"name": "bool"
+					},
+					"required": false,
+					"description": "should the input span the full-width of its parent?",
+					"defaultValue": {
+						"value": "false",
+						"computed": false
+					}
+				},
+				"pattern": {
+					"type": {
+						"name": "string"
+					},
+					"required": false,
+					"description": "regex input pattern",
+					"defaultValue": {
+						"value": "''",
+						"computed": false
+					}
+				},
+				"value": {
+					"type": {
+						"name": "string"
+					},
+					"required": false,
+					"description": "html value of the input element",
+					"defaultValue": {
+						"value": "''",
+						"computed": false
+					}
+				},
+				"onChange": {
+					"defaultValue": {
+						"value": "() => {}",
+						"computed": false
+					}
+				}
+			}
+		}
+	};
+
+/***/ },
+/* 163 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
 	exports.__esModule = true;
@@ -20311,7 +20258,216 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(161);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+		title: _react.PropTypes.string.isRequired,
+		docs: _react.PropTypes.object
+	};
+
+	var defaultProps = {
+		title: 'missing heading title'
+	};
+
+	var ComponentViewComponent = function (_Component) {
+		_inherits(ComponentViewComponent, _Component);
+
+		function ComponentViewComponent() {
+			_classCallCheck(this, ComponentViewComponent);
+
+			return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+		}
+
+		ComponentViewComponent.prototype.render = function render() {
+			var _this2 = this;
+
+			var propDocs = function () {
+				var docs = _this2.props.docs;
+
+				if (docs) {
+					var propsEls = [];
+					var componentProps = docs.props;
+
+					if (docs.props) {
+						for (var property in componentProps) {
+							if (componentProps.hasOwnProperty(property)) {
+								// console.log('property', property, componentProps[property])
+								propsEls.push(_react2.default.createElement(
+									'li',
+									{ key: property },
+									'{',
+									_react2.default.createElement(
+										'strong',
+										null,
+										property
+									),
+									', ',
+									_react2.default.createElement(
+										'em',
+										null,
+										componentProps[property].type ? componentProps[property].type.name : 'fn'
+									),
+									'}: ',
+									componentProps[property].description
+								));
+							}
+						}
+					}
+
+					return _react2.default.createElement(
+						'div',
+						{ className: 'component-view__docs' },
+						_react2.default.createElement(
+							'h2',
+							{ className: 'heading-4' },
+							'Properties'
+						),
+						_react2.default.createElement(
+							'ul',
+							{ className: 'bulleted-list' },
+							propsEls
+						)
+					);
+				}
+			}();
+
+			return _react2.default.createElement(
+				'section',
+				{ className: 'component-view' },
+				_react2.default.createElement(
+					'h1',
+					{ className: 'heading-3' },
+					this.props.title
+				),
+				_react2.default.createElement(
+					'p',
+					{ className: 'component-view__desc' },
+					this.props.docs ? this.props.docs.description : this.props.desc
+				),
+				propDocs,
+				_react2.default.createElement(
+					'h2',
+					{ className: 'heading-4' },
+					'Examples'
+				),
+				this.props.children
+			);
+		};
+
+		return ComponentViewComponent;
+	}(_react.Component);
+
+	exports.default = ComponentViewComponent;
+
+	ComponentViewComponent.propTypes = propTypes;
+	ComponentViewComponent.defaultProps = defaultProps;
+
+/***/ },
+/* 164 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _TextboxComponent = __webpack_require__(165);
+
+	var _TextboxComponent2 = _interopRequireDefault(_TextboxComponent);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var TextboxComponentExample = function (_Component) {
+		_inherits(TextboxComponentExample, _Component);
+
+		function TextboxComponentExample(props) {
+			_classCallCheck(this, TextboxComponentExample);
+
+			var _this = _possibleConstructorReturn(this, _Component.call(this, props));
+
+			_this.state = {
+				content: ''
+			};
+			return _this;
+		}
+
+		TextboxComponentExample.prototype.onChange = function onChange(prop, value) {
+			this.setState(function () {
+				var newState = {};
+				newState[prop] = value;
+				return newState;
+			});
+		};
+
+		TextboxComponentExample.prototype.render = function render() {
+			return _react2.default.createElement(
+				'div',
+				null,
+				_react2.default.createElement(
+					'div',
+					{ className: 'component-view__example' },
+					_react2.default.createElement(_TextboxComponent2.default, {
+						placeholder: 'type here',
+						name: 'content',
+						value: this.state.content,
+						onChange: this.onChange.bind(this) })
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'component-view__code' },
+					'<Textbox placeholder="type here" name="content" value={this.state.content} onChange={this.onChange.bind(this)} />'
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'component-view__example' },
+					_react2.default.createElement(_TextboxComponent2.default, {
+						placeholder: 'type here',
+						name: 'content',
+						value: this.state.content,
+						onChange: this.onChange.bind(this),
+						error: true })
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'component-view__code' },
+					'<Textbox placeholder="type here" name="content" value={this.state.content} onChange={this.onChange.bind(this)} error={true} />'
+				)
+			);
+		};
+
+		return TextboxComponentExample;
+	}(_react.Component);
+
+	exports.default = TextboxComponentExample;
+
+/***/ },
+/* 165 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(166);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -20323,43 +20479,107 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Heading1Component = function (_Component) {
-		_inherits(Heading1Component, _Component);
+	var propTypes = {
+		/**
+	 * input placeholder text
+	 */
+		placeholder: _react.PropTypes.string.isRequired,
 
-		function Heading1Component() {
-			_classCallCheck(this, Heading1Component);
+		/**
+	 * input element name, which will be returned in onChange handler
+	 */
+		name: _react.PropTypes.string.isRequired,
+
+		/**
+	 * html input type; ex. text, email, etc.
+	 */
+		type: _react.PropTypes.string,
+
+		/**
+	 * whether or not the form is in an error state
+	 */
+		error: _react.PropTypes.bool,
+
+		/**
+	 * should the input span the full-width of its parent?
+	 */
+		wide: _react.PropTypes.bool,
+
+		/**
+	 * function to be called when user enters a value into the field
+	 */
+		// onChange: PropTypes.fn,
+
+		/**
+	 * regex input pattern
+	 */
+		pattern: _react.PropTypes.string,
+
+		/**
+	 * html value of the input element
+	 */
+		value: _react.PropTypes.string
+	};
+
+	var defaultProps = {
+		placeholder: 'Placeholder',
+		name: 'property',
+		type: 'text',
+		error: false,
+		wide: false,
+		onChange: function onChange() {},
+		pattern: '',
+		value: ''
+	};
+
+	/**
+	 * Text input with various properties for error handling, placeholders, etc.
+	 */
+
+	var TextboxComponent = function (_Component) {
+		_inherits(TextboxComponent, _Component);
+
+		function TextboxComponent() {
+			_classCallCheck(this, TextboxComponent);
 
 			return _possibleConstructorReturn(this, _Component.apply(this, arguments));
 		}
 
-		Heading1Component.prototype.render = function render() {
-			var classes = (0, _classnames2.default)({
-				'heading-1': true,
-				'heading-1--centered': this.props.centered
-			});
+		TextboxComponent.prototype.onChange = function onChange(evt) {
+			var val = evt.target.value;
 
-			return _react2.default.createElement(
-				'h1',
-				{ className: classes },
-				this.props.content
-			);
+			if (this.props.onChange) {
+				this.props.onChange(this.props.name, val);
+			}
 		};
 
-		return Heading1Component;
+		TextboxComponent.prototype.render = function render() {
+			var classes = (0, _classnames2.default)({
+				'textbox': true,
+				'textbox--wide': this.props.wide,
+				'textbox--error': this.props.error
+			});
+
+			return _react2.default.createElement('input', {
+				className: classes,
+				placeholder: this.props.placeholder,
+				name: this.props.name,
+				type: this.props.type,
+				pattern: this.props.pattern,
+				onChange: this.onChange.bind(this),
+				value: this.props.value });
+		};
+
+		return TextboxComponent;
 	}(_react.Component);
 
-	Heading1Component.propTypes = {
-		content: _react.PropTypes.string.isRequired,
-		centered: _react.PropTypes.bool
-	};
-	Heading1Component.defaultProps = {
-		content: 'missing heading 1 content',
-		centered: false
-	};
-	exports.default = Heading1Component;
+	exports.default = TextboxComponent;
+
+	TextboxComponent.propTypes = propTypes;
+	TextboxComponent.defaultProps = defaultProps;
 
 /***/ },
-/* 161 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -20413,16 +20633,22 @@
 
 
 /***/ },
-/* 162 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	exports.__esModule = true;
 
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactSlick = __webpack_require__(168);
+
+	var _reactSlick2 = _interopRequireDefault(_reactSlick);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20432,208 +20658,88 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var ButtonComponent = function (_Component) {
-		_inherits(ButtonComponent, _Component);
+	var SliderComponentExample = function (_Component) {
+		_inherits(SliderComponentExample, _Component);
 
-		function ButtonComponent() {
-			_classCallCheck(this, ButtonComponent);
-
-			return _possibleConstructorReturn(this, _Component.apply(this, arguments));
-		}
-
-		ButtonComponent.prototype.render = function render() {
-			// const children = (() => {
-			// 	if (this.props.children.length) {
-			// 		return this.props.children.map((child, index) => {
-			// 			return (
-			// 				<li key={index} className="component-view__example">
-			// 					{child}
-			// 				</li>
-			// 			)
-			// 		})
-			// 	} else {
-			// 		return (
-			// 			<li className="component-view__example">
-			// 				{this.props.children}
-			// 			</li>
-			// 		)
-			// 	}
-			// })()
-
-			return _react2.default.createElement(
-				'section',
-				{ className: 'component-view' },
-				_react2.default.createElement(
-					'h1',
-					{ className: 'heading-3' },
-					this.props.title
-				),
-				_react2.default.createElement(
-					'p',
-					{ className: 'component-view__desc' },
-					this.props.desc
-				),
-				this.props.children
-			);
-		};
-
-		return ButtonComponent;
-	}(_react.Component);
-
-	ButtonComponent.propTypes = {
-		title: _react.PropTypes.string.isRequired,
-		desc: _react.PropTypes.string
-	};
-	ButtonComponent.defaultProps = {
-		content: 'missing heading title'
-	};
-	exports.default = ButtonComponent;
-
-/***/ },
-/* 163 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	exports.__esModule = true;
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _classnames = __webpack_require__(161);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var TextboxComponent = function (_Component) {
-		_inherits(TextboxComponent, _Component);
-
-		function TextboxComponent() {
-			_classCallCheck(this, TextboxComponent);
+		function SliderComponentExample() {
+			_classCallCheck(this, SliderComponentExample);
 
 			return _possibleConstructorReturn(this, _Component.apply(this, arguments));
 		}
 
-		TextboxComponent.prototype.onChange = function onChange(evt) {
-			var val = evt.target.value;
-
-			if (this.props.onChange) {
-				this.props.onChange(this.props.name, val);
-			}
-		};
-
-		TextboxComponent.prototype.render = function render() {
-			var classes = (0, _classnames2.default)({
-				'textbox': true,
-				'textbox--wide': this.props.wide,
-				'textbox--error': this.props.error
-			});
-
-			return _react2.default.createElement('input', {
-				className: classes,
-				placeholder: this.props.placeholder,
-				name: this.props.name,
-				type: this.props.type,
-				pattern: this.props.pattern,
-				onChange: this.onChange.bind(this),
-				value: this.props.value });
-		};
-
-		return TextboxComponent;
-	}(_react.Component);
-
-	TextboxComponent.propTypes = {
-		placeholder: _react.PropTypes.string.isRequired,
-		name: _react.PropTypes.string.isRequired,
-		type: _react.PropTypes.string,
-		error: _react.PropTypes.bool,
-		wide: _react.PropTypes.bool,
-		// onChange: PropTypes.fn,
-		pattern: _react.PropTypes.string,
-		value: _react.PropTypes.string
-	};
-	TextboxComponent.defaultProps = {
-		placeholder: 'Placeholder',
-		name: 'property',
-		type: 'text',
-		error: false,
-		wide: false,
-		onChange: function onChange() {},
-		pattern: '',
-		value: ''
-	};
-	exports.default = TextboxComponent;
-
-/***/ },
-/* 164 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	exports.__esModule = true;
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ProgressBar = function (_Component) {
-		_inherits(ProgressBar, _Component);
-
-		function ProgressBar() {
-			_classCallCheck(this, ProgressBar);
-
-			return _possibleConstructorReturn(this, _Component.apply(this, arguments));
-		}
-
-		ProgressBar.prototype.render = function render() {
-			var progressStyle = {
-				width: this.props.percent + '%'
+		SliderComponentExample.prototype.render = function render() {
+			var sliderSettings = {
+				autoplay: true,
+				autoplaySpeed: 3000,
+				dots: true,
+				infinite: true,
+				speed: 500,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false
 			};
 
 			return _react2.default.createElement(
 				'div',
-				{ className: 'progress-bar' },
-				_react2.default.createElement('div', { className: 'progress-bar__progress', style: progressStyle })
+				null,
+				_react2.default.createElement(
+					'div',
+					{ className: 'component-view__example' },
+					_react2.default.createElement(
+						_reactSlick2.default,
+						_extends({ className: 'slider' }, sliderSettings),
+						_react2.default.createElement(
+							'div',
+							{ className: 'slider__item' },
+							_react2.default.createElement(
+								'h2',
+								{ className: 'heading-1' },
+								'Slide 1'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'slider__item' },
+							_react2.default.createElement(
+								'h2',
+								{ className: 'heading-1' },
+								'Slide 2'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'slider__item' },
+							_react2.default.createElement(
+								'h2',
+								{ className: 'heading-1' },
+								'Slide 3'
+							)
+						)
+					)
+				),
+				_react2.default.createElement(
+					'pre',
+					{ className: 'component-view__code' },
+					'const sliderSettings = {\n    autoplay: true,\n    autoplaySpeed: 3000,\n    dots: true,\n    infinite: true,\n    speed: 500,\n    slidesToShow: 1,\n    slidesToScroll: 1,\n    arrows: false\n}\n\n<Slider className="slider" {...sliderSettings}>\n    <div className="slider__item">\n        <h2 className="heading-1">Slide 1</h2>\n    </div>\n\n    <div className="slider__item">\n        <h2 className="heading-1">Slide 2</h2>\n    </div>\n\n    <div className="slider__item">\n        <h2 className="heading-1">Slide 3</h2>\n    </div>\n</Slider>'
+				)
 			);
 		};
 
-		return ProgressBar;
+		return SliderComponentExample;
 	}(_react.Component);
 
-	ProgressBar.propTypes = {
-		percent: _react.PropTypes.number.isRequired
-	};
-	ProgressBar.defaultProps = {
-		percent: 0
-	};
-	exports.default = ProgressBar;
+	exports.default = SliderComponentExample;
 
 /***/ },
-/* 165 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	module.exports = __webpack_require__(166);
+	module.exports = __webpack_require__(169);
 
 /***/ },
-/* 166 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20644,21 +20750,21 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _innerSlider = __webpack_require__(167);
+	var _innerSlider = __webpack_require__(170);
 
-	var _objectAssign = __webpack_require__(171);
+	var _objectAssign = __webpack_require__(174);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
-	var _json2mq = __webpack_require__(179);
+	var _json2mq = __webpack_require__(182);
 
 	var _json2mq2 = _interopRequireDefault(_json2mq);
 
-	var _reactResponsiveMixin = __webpack_require__(181);
+	var _reactResponsiveMixin = __webpack_require__(184);
 
 	var _reactResponsiveMixin2 = _interopRequireDefault(_reactResponsiveMixin);
 
-	var _defaultProps = __webpack_require__(175);
+	var _defaultProps = __webpack_require__(178);
 
 	var _defaultProps2 = _interopRequireDefault(_defaultProps);
 
@@ -20735,7 +20841,7 @@
 	module.exports = Slider;
 
 /***/ },
-/* 167 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20752,31 +20858,31 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _mixinsEventHandlers = __webpack_require__(168);
+	var _mixinsEventHandlers = __webpack_require__(171);
 
 	var _mixinsEventHandlers2 = _interopRequireDefault(_mixinsEventHandlers);
 
-	var _mixinsHelpers = __webpack_require__(172);
+	var _mixinsHelpers = __webpack_require__(175);
 
 	var _mixinsHelpers2 = _interopRequireDefault(_mixinsHelpers);
 
-	var _initialState = __webpack_require__(174);
+	var _initialState = __webpack_require__(177);
 
 	var _initialState2 = _interopRequireDefault(_initialState);
 
-	var _defaultProps = __webpack_require__(175);
+	var _defaultProps = __webpack_require__(178);
 
 	var _defaultProps2 = _interopRequireDefault(_defaultProps);
 
-	var _classnames = __webpack_require__(161);
+	var _classnames = __webpack_require__(166);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _track = __webpack_require__(176);
+	var _track = __webpack_require__(179);
 
-	var _dots = __webpack_require__(177);
+	var _dots = __webpack_require__(180);
 
-	var _arrows = __webpack_require__(178);
+	var _arrows = __webpack_require__(181);
 
 	var InnerSlider = _react2['default'].createClass({
 	  displayName: 'InnerSlider',
@@ -20924,7 +21030,7 @@
 	exports.InnerSlider = InnerSlider;
 
 /***/ },
-/* 168 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20934,9 +21040,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _trackHelper = __webpack_require__(169);
+	var _trackHelper = __webpack_require__(172);
 
-	var _objectAssign = __webpack_require__(171);
+	var _objectAssign = __webpack_require__(174);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -21090,7 +21196,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 169 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21100,7 +21206,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _ReactDOM = __webpack_require__(170);
+	var _ReactDOM = __webpack_require__(173);
 
 	var _ReactDOM2 = _interopRequireDefault(_ReactDOM);
 
@@ -21216,7 +21322,7 @@
 	exports.getTrackLeft = getTrackLeft;
 
 /***/ },
-/* 170 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21241,7 +21347,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 171 */
+/* 174 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21273,7 +21379,7 @@
 
 
 /***/ },
-/* 172 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21288,17 +21394,17 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _ReactDOM = __webpack_require__(170);
+	var _ReactDOM = __webpack_require__(173);
 
 	var _ReactDOM2 = _interopRequireDefault(_ReactDOM);
 
-	var _reactLibReactTransitionEvents = __webpack_require__(173);
+	var _reactLibReactTransitionEvents = __webpack_require__(176);
 
 	var _reactLibReactTransitionEvents2 = _interopRequireDefault(_reactLibReactTransitionEvents);
 
-	var _trackHelper = __webpack_require__(169);
+	var _trackHelper = __webpack_require__(172);
 
-	var _objectAssign = __webpack_require__(171);
+	var _objectAssign = __webpack_require__(174);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -21563,7 +21669,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 173 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21677,7 +21783,7 @@
 	module.exports = ReactTransitionEvents;
 
 /***/ },
-/* 174 */
+/* 177 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -21727,7 +21833,7 @@
 	module.exports = initialState;
 
 /***/ },
-/* 175 */
+/* 178 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21779,7 +21885,7 @@
 	module.exports = defaultProps;
 
 /***/ },
-/* 176 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21794,11 +21900,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _objectAssign = __webpack_require__(171);
+	var _objectAssign = __webpack_require__(174);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
-	var _classnames = __webpack_require__(161);
+	var _classnames = __webpack_require__(166);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -21928,7 +22034,7 @@
 	exports.Track = Track;
 
 /***/ },
-/* 177 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21943,7 +22049,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(161);
+	var _classnames = __webpack_require__(166);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -22007,7 +22113,7 @@
 	exports.Dots = Dots;
 
 /***/ },
-/* 178 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22024,7 +22130,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(161);
+	var _classnames = __webpack_require__(166);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -22124,10 +22230,10 @@
 	exports.NextArrow = NextArrow;
 
 /***/ },
-/* 179 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var camel2hyphen = __webpack_require__(180);
+	var camel2hyphen = __webpack_require__(183);
 
 	var isDimension = function (feature) {
 	  var re = /[height|width]$/;
@@ -22180,7 +22286,7 @@
 	module.exports = json2mq;
 
 /***/ },
-/* 180 */
+/* 183 */
 /***/ function(module, exports) {
 
 	var camel2hyphen = function (str) {
@@ -22194,12 +22300,12 @@
 	module.exports = camel2hyphen;
 
 /***/ },
-/* 181 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var canUseDOM = __webpack_require__(182);
-	var enquire = canUseDOM && __webpack_require__(183);
-	var json2mq = __webpack_require__(179);
+	var canUseDOM = __webpack_require__(185);
+	var enquire = canUseDOM && __webpack_require__(186);
+	var json2mq = __webpack_require__(182);
 
 	var ResponsiveMixin = {
 	  media: function (query, handler) {
@@ -22229,7 +22335,7 @@
 	module.exports = ResponsiveMixin;
 
 /***/ },
-/* 182 */
+/* 185 */
 /***/ function(module, exports) {
 
 	var canUseDOM = !!(
@@ -22241,7 +22347,7 @@
 	module.exports = canUseDOM;
 
 /***/ },
-/* 183 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -22537,6 +22643,144 @@
 		return new MediaQueryDispatch();
 
 	}));
+
+/***/ },
+/* 187 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _ProgressBarComponent = __webpack_require__(188);
+
+	var _ProgressBarComponent2 = _interopRequireDefault(_ProgressBarComponent);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SliderComponentExample = function (_Component) {
+		_inherits(SliderComponentExample, _Component);
+
+		function SliderComponentExample(props) {
+			_classCallCheck(this, SliderComponentExample);
+
+			var _this = _possibleConstructorReturn(this, _Component.call(this, props));
+
+			_this.state = {
+				progress: 25
+			};
+
+			_this.moveProgressBar();
+			return _this;
+		}
+
+		SliderComponentExample.prototype.moveProgressBar = function moveProgressBar() {
+			var _this2 = this;
+
+			setInterval(function () {
+				_this2.setState(function (prevState) {
+					return {
+						progress: prevState.progress === 25 ? 68 : 25
+					};
+				});
+			}, 2000);
+		};
+
+		SliderComponentExample.prototype.render = function render() {
+			return _react2.default.createElement(
+				'div',
+				null,
+				_react2.default.createElement(
+					'div',
+					{ className: 'component-view__example' },
+					_react2.default.createElement(_ProgressBarComponent2.default, { percent: this.props.progress })
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'component-view__code' },
+					'<ProgressBar percent={this.state.progress} />'
+				)
+			);
+		};
+
+		return SliderComponentExample;
+	}(_react.Component);
+
+	exports.default = SliderComponentExample;
+
+/***/ },
+/* 188 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var propTypes = {
+		/**
+	 * number representing the percent of completion the progress bar should show, ex. 50
+	 */
+		percent: _react.PropTypes.number.isRequired
+	};
+
+	var defaultProps = {
+		percent: 0
+	};
+
+	/**
+	 * Progress bar that animates on completion change
+	 */
+
+	var ProgressBar = function (_Component) {
+		_inherits(ProgressBar, _Component);
+
+		function ProgressBar() {
+			_classCallCheck(this, ProgressBar);
+
+			return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+		}
+
+		ProgressBar.prototype.render = function render() {
+			var progressStyle = {
+				width: this.props.percent + '%'
+			};
+
+			return _react2.default.createElement(
+				'div',
+				{ className: 'progress-bar' },
+				_react2.default.createElement('div', { className: 'progress-bar__progress', style: progressStyle })
+			);
+		};
+
+		return ProgressBar;
+	}(_react.Component);
+
+	exports.default = ProgressBar;
+
+	ProgressBar.propTypes = propTypes;
+	ProgressBar.defaultProps = defaultProps;
 
 /***/ }
 /******/ ]);

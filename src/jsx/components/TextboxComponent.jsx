@@ -1,29 +1,63 @@
 import React, {Component, PropTypes} from 'react'
 import classNames from 'classnames'
 
+const propTypes = {
+	/**
+	* input placeholder text
+	*/
+	placeholder: PropTypes.string.isRequired,
+
+	/**
+	* input element name, which will be returned in onChange handler
+	*/
+	name: PropTypes.string.isRequired,
+
+	/**
+	* html input type; ex. text, email, etc.
+	*/
+	type: PropTypes.string,
+
+	/**
+	* whether or not the form is in an error state
+	*/
+	error: PropTypes.bool,
+
+	/**
+	* should the input span the full-width of its parent?
+	*/
+	wide: PropTypes.bool,
+
+	/**
+	* function to be called when user enters a value into the field
+	*/
+	// onChange: PropTypes.fn,
+
+	/**
+	* regex input pattern
+	*/
+	pattern: PropTypes.string,
+
+	/**
+	* html value of the input element
+	*/
+	value: PropTypes.string
+}
+
+const defaultProps = {
+	placeholder: 'Placeholder',
+	name: 'property',
+	type: 'text',
+	error: false,
+	wide: false,
+	onChange: () => {},
+	pattern: '',
+	value: ''
+}
+
+/**
+ * Text input with various properties for error handling, placeholders, etc.
+ */
 export default class TextboxComponent extends Component {
-	static propTypes = {
-		placeholder: PropTypes.string.isRequired,
-		name: PropTypes.string.isRequired,
-		type: PropTypes.string,
-		error: PropTypes.bool,
-		wide: PropTypes.bool,
-		// onChange: PropTypes.fn,
-		pattern: PropTypes.string,
-		value: PropTypes.string
-	};
-
-	static defaultProps = {
-		placeholder: 'Placeholder',
-		name: 'property',
-		type: 'text',
-		error: false,
-		wide: false,
-		onChange: () => {},
-		pattern: '',
-		value: ''
-	};
-
 	onChange (evt) {
 		const val = evt.target.value
 
@@ -51,3 +85,6 @@ export default class TextboxComponent extends Component {
 		)
 	}
 }
+
+TextboxComponent.propTypes = propTypes
+TextboxComponent.defaultProps = defaultProps

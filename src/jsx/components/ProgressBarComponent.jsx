@@ -1,13 +1,20 @@
 import React, {Component, PropTypes} from 'react'
 
-export default class ProgressBar extends Component {
-	static propTypes = {
-		percent: PropTypes.number.isRequired
-	};
+const propTypes = {
+	/**
+	* number representing the percent of completion the progress bar should show, ex. 50
+	*/
+	percent: PropTypes.number.isRequired
+}
 
-	static defaultProps = {
-		percent: 0
-	};
+const defaultProps = {
+	percent: 0
+}
+
+/**
+ * Progress bar that animates on completion change
+ */
+export default class ProgressBar extends Component {
 
 	render () {
 		let progressStyle = {
@@ -21,3 +28,6 @@ export default class ProgressBar extends Component {
 		)
 	}
 }
+
+ProgressBar.propTypes = propTypes
+ProgressBar.defaultProps = defaultProps

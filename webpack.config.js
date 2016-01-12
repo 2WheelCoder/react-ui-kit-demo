@@ -15,10 +15,15 @@ module.exports.getConfig = function(type) {
 				query: {
 					presets: ['react', 'es2015-loose', 'stage-1']
 				}
+			},
+			{
+				test: /\.json?$/,
+				exclude: /node_modules/,
+				loader: 'json-loader'
 			}]
 		},
 		resolve: {
-			extensions: ['', '.js', '.jsx']
+			extensions: ['', '.js', '.jsx', '.json']
 		}
 	};
 }

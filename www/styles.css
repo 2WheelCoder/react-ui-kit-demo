@@ -328,10 +328,10 @@ input {
   color: #515151;
 }
 .bulleted-list {
-  padding-left: 1.5em;
+  padding-left: 3em;
 }
 .bulleted-list li {
-  list-style: disc inside;
+  list-style: disc outside;
   margin-bottom: 0.3em;
   line-height: 1.5;
 }
@@ -358,10 +358,10 @@ input {
   margin: 1.5em 0 0.5em;
 }
 .numeric-list {
-  padding-left: 1.5em;
+  padding-left: 3em;
 }
 .numeric-list li {
-  list-style: decimal inside;
+  list-style: decimal outside;
   margin-bottom: 0.3em;
 }
 .progress-bar {
