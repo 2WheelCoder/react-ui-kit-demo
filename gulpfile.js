@@ -42,6 +42,7 @@ function styles() {
 
 gulp.task('browser-sync', function() {
 	browserSync({
+		port: 8000,
 		server: {
 			baseDir: "./www/"
 		}
